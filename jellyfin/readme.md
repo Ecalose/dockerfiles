@@ -43,7 +43,11 @@ services:
 docker exec -it jellyfin amdgpu-install
 ```
 
-经我测试安装好闭源驱动后在AMD 5700G上可以完美硬解4K x265视频，并可以开启`控制台 -> 播放 -> 启用色调映射`（注意不是`启用 VPP 色调映射`），将HDR转成PC上的SDR。
+经我测试安装好闭源驱动后在AMD 5700G上可以完美硬解4K x265视频，并可以开启`控制台 -> 播放 -> 启用色调映射`（注意不是`启用 VPP 色调映射`），将HDR转成的SDR，在非电视类设备上色彩更鲜亮不灰暗。注意`硬件加速`驱动请选择`Video Acceleration (VAAPI)`。
+
+下图是硬解4K x265的结果：
+
+![4K](https://raw.githubusercontent.com/devome/dockerfiles/master/jellyfin/4K-x265.png)
 
 ## 可以硬解什么
 
